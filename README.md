@@ -340,34 +340,6 @@ parameters = {
 
 ---
 
-## 🔮 Future Improvements
-
-### Model Enhancements
-- [ ] Test XGBoost and LightGBM for better performance
-- [ ] Implement neural networks for comparison
-- [ ] Try stacking/ensemble methods
-- [ ] Add SHAP values for better interpretability
-
-### Feature Engineering
-- [ ] Create interaction features (age × education, etc.)
-- [ ] Derive new features (income bracket estimator)
-- [ ] Time-series analysis if temporal data available
-- [ ] Geographic clustering for native-country
-
-### Deployment
-- [ ] Build REST API with FastAPI
-- [ ] Create web interface with Streamlit
-- [ ] Deploy to cloud (AWS/GCP/Azure)
-- [ ] Set up CI/CD pipeline
-- [ ] Add model monitoring and retraining
-
-### Data Improvements
-- [ ] Collect more recent census data (post-1994)
-- [ ] Handle missing values more sophisticatedly
-- [ ] Address potential bias in protected attributes
-- [ ] Gather additional economic indicators
-
----
 
 ## 🤝 Contributing
 
@@ -413,10 +385,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-### Dataset
-- **Original Authors**: Ron Kohavi and Barry Becker
-- **Source**: UCI Machine Learning Repository
-- **Paper**: ["Scaling Up the Accuracy of Naive-Bayes Classifiers: A Decision-Tree Hybrid"](https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf) (KDD-96)
 
 ### Inspiration
 - Udacity Data Scientist Nanodegree Program
@@ -433,16 +401,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-**Your Name** - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
-
-**Project Link**: [https://github.com/yourusername/charity-ml-donor-prediction](https://github.com/yourusername/charity-ml-donor-prediction)
+**Project Link**: [https://github.com/Vegetam/charity-ml-donor-prediction](https://github.com/Vegetam/charity-ml-donor-prediction)
 
 ---
 
 ## 📊 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/charity-ml-donor-prediction?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/charity-ml-donor-prediction?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/charity-ml-donor-prediction)
+![GitHub stars](https://img.shields.io/github/stars/Vegetam/charity-ml-donor-prediction?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Vegetam/charity-ml-donor-prediction?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Vegetam/charity-ml-donor-prediction)
 
 **Made with ❤️ and Python**
