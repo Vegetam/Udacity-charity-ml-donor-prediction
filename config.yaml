@@ -1,0 +1,92 @@
+# CharityML Donor Prediction Configuration
+
+# Data paths
+data:
+  raw: "data/raw/census.csv"
+  processed:
+    train_features: "data/processed/X_train.pkl"
+    test_features: "data/processed/X_test.pkl"
+    train_labels: "data/processed/y_train.pkl"
+    test_labels: "data/processed/y_test.pkl"
+
+# Model paths
+models:
+  adaboost: "models/adaboost_optimized.pkl"
+  random_forest: "models/random_forest.pkl"
+  logistic_regression: "models/logistic_regression.pkl"
+
+# Preprocessing
+preprocessing:
+  test_size: 0.2
+  random_state: 0
+  normalization: "minmax"
+  skewed_features:
+    - "capital-gain"
+    - "capital-loss"
+  numerical_features:
+    - "age"
+    - "education-num"
+    - "capital-gain"
+    - "capital-loss"
+    - "hours-per-week"
+
+# Model training
+training:
+  sample_sizes: [0.01, 0.1, 1.0]  # Percentages of training data
+  random_state: 42
+  
+# Hyperparameter tuning
+tuning:
+  cv_folds: 5
+  scoring: "f_beta"  # F-score with beta=0.5
+  n_jobs: -1
+  
+  # AdaBoost parameters
+  adaboost:
+    n_estimators: [50, 100, 200]
+    learning_rate: [0.5, 1.0, 1.5]
+  
+  # Random Forest parameters
+  random_forest:
+    n_estimators: [50, 100, 200]
+    max_depth: [10, 20, 30]
+    min_samples_split: [2, 5, 10]
+  
+  # Logistic Regression parameters
+  logistic_regression:
+    C: [0.1, 1.0, 10.0]
+    penalty: ["l1", "l2"]
+    solver: ["liblinear"]
+
+# Evaluation
+evaluation:
+  beta: 0.5  # For F-score calculation
+  metrics:
+    - "accuracy"
+    - "f_score"
+    - "precision"
+    - "recall"
+
+# Feature importance
+feature_importance:
+  top_n: 5
+  method: "model_based"  # or "permutation"
+
+# Prediction thresholds
+prediction:
+  high_confidence_threshold: 0.8
+  medium_confidence_threshold: 0.6
+  low_confidence_threshold: 0.4
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/training.log"
+
+# Visualization
+visualization:
+  figure_size: [10, 6]
+  dpi: 300
+  style: "seaborn-v0_8-darkgrid"
+  save_format: "png"
